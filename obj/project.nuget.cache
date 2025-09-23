@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "7ez4IW2YWJs=",
+  "success": true,
+  "projectFilePath": "/Users/luapdarula/Projects/SimpleWebApi/SimpleWebApi/SimpleWebApi.csproj",
+  "expectedPackageFiles": [
+    "/Users/luapdarula/.nuget/packages/microsoft.aspnetcore.openapi/9.0.4/microsoft.aspnetcore.openapi.9.0.4.nupkg.sha512",
+    "/Users/luapdarula/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
