@@ -33,6 +33,23 @@
             "related": ".pdb;.xml"
           }
         }
+      },
+      "Sentry/5.15.1": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.props": {},
+          "buildTransitive/Sentry.targets": {}
+        }
       }
     }
   },
@@ -67,11 +84,69 @@
         "microsoft.openapi.1.6.17.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
+    },
+    "Sentry/5.15.1": {
+      "sha512": "x3FZzvgn9u1Oa41qzGzfOIUvNCcYmDPHT+2LKYa09SxQE7mnhRVYt5UOWr6B9zi7n/RltnVh6X6zgZZKn5PoLw==",
+      "type": "package",
+      "path": "sentry/5.15.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "analyzers/dotnet/cs/Sentry.SourceGenerators.dll",
+        "build/Sentry.Native.targets",
+        "build/Sentry.props",
+        "build/Sentry.targets",
+        "buildTransitive/Sentry.Native.targets",
+        "buildTransitive/Sentry.props",
+        "buildTransitive/Sentry.targets",
+        "lib/net462/Sentry.dll",
+        "lib/net462/Sentry.xml",
+        "lib/net8.0-android34.0/Sentry.dll",
+        "lib/net8.0-android34.0/Sentry.xml",
+        "lib/net8.0-ios17.0/Sentry.dll",
+        "lib/net8.0-ios17.0/Sentry.xml",
+        "lib/net8.0-maccatalyst17.0/Sentry.dll",
+        "lib/net8.0-maccatalyst17.0/Sentry.xml",
+        "lib/net8.0/Sentry.dll",
+        "lib/net8.0/Sentry.xml",
+        "lib/net9.0-android35.0/Sentry.dll",
+        "lib/net9.0-android35.0/Sentry.xml",
+        "lib/net9.0-ios18.0/Sentry.dll",
+        "lib/net9.0-ios18.0/Sentry.xml",
+        "lib/net9.0-maccatalyst18.0/Sentry.dll",
+        "lib/net9.0-maccatalyst18.0/Sentry.xml",
+        "lib/net9.0/Sentry.dll",
+        "lib/net9.0/Sentry.xml",
+        "lib/netstandard2.0/Sentry.dll",
+        "lib/netstandard2.0/Sentry.xml",
+        "lib/netstandard2.1/Sentry.dll",
+        "lib/netstandard2.1/Sentry.xml",
+        "sentry-native/linux-arm64/libsentry-native.a",
+        "sentry-native/linux-musl-arm64/libsentry-native.a",
+        "sentry-native/linux-musl-x64/libsentry-native.a",
+        "sentry-native/linux-x64/libsentry-native.a",
+        "sentry-native/osx/libsentry-native.a",
+        "sentry-native/win-arm64/sentry-native.lib",
+        "sentry-native/win-x64/sentry-native.lib",
+        "sentry-nuget.png",
+        "sentry.5.15.1.nupkg.sha512",
+        "sentry.nuspec",
+        "tools/sentry-cli-Darwin-arm64",
+        "tools/sentry-cli-Darwin-x86_64",
+        "tools/sentry-cli-Linux-aarch64",
+        "tools/sentry-cli-Linux-i686",
+        "tools/sentry-cli-Linux-x86_64",
+        "tools/sentry-cli-Windows-i686.exe",
+        "tools/sentry-cli-Windows-x86_64.exe"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "Microsoft.AspNetCore.OpenApi >= 9.0.4"
+      "Microsoft.AspNetCore.OpenApi >= 9.0.4",
+      "Sentry >= 5.15.1"
     ]
   },
   "packageFolders": {
@@ -120,6 +195,10 @@
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[9.0.4, )"
+          },
+          "Sentry": {
+            "target": "Package",
+            "version": "[5.15.1, )"
           }
         },
         "imports": [

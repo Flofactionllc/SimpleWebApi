@@ -47,6 +47,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.4, )"
+            },
+            "Sentry": {
+              "target": "Package",
+              "version": "[5.15.1, )"
             }
           },
           "imports": [
