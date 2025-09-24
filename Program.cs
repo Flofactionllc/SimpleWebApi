@@ -1,29 +1,14 @@
-using Sentry;
-
-SentrySdk.Init(options =>
-{
-    // A Sentry Data Source Name (DSN) is required.
-    // See https://docs.sentry.io/product/sentry-basics/dsn-explainer/
-    // You can set it in the SENTRY_DSN environment variable, or you can set it in code here.
-    options.Dsn = "https://c9ab1c63029ff599954c957ac02fe4a4@o4509736158363648.ingest.us.sentry.io/4510071724900352";
-
-    // When debug is enabled, the Sentry client will emit detailed debugging information to the console.
-    // This might be helpful, or might interfere with the normal operation of your application.
-    // We enable it here for demonstration purposes when first trying Sentry.
-    // You shouldn't do this in your applications unless you're troubleshooting issues with Sentry.
-    options.Debug = true;
-
-    // This option is recommended. It enables Sentry's "Release Health" feature.
-    options.AutoSessionTracking = true;
-});
-
-SentrySdk.CaptureMessage("Something went wrong");
+using Microsoft.AspNetCore.Diagnostics;
+using Sentry.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+// Add Sentry integration
+builder.Services.AddSentry();
 
 var app = builder.Build();
 
@@ -34,6 +19,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Add Sentry middleware
+app.UseSentryTracing();
 
 var summaries = new[]
 {
